@@ -1,1 +1,1 @@
-# react_demo
+# react-training
