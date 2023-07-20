@@ -13,3 +13,6 @@ redux demo/node_modules/
 todo-list/node_modules/
 user-forms-input/node_modules/
 expanse-chart/node_modules/
+multi-page-with-react-route/node_modules/
+multi-page-with-react-route-advance/backend/node_modules/
+multi-page-with-react-route-advance/frontend/node_modules/
