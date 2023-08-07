@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "body": "It is a global web development company",
+      "author": "IT Path Solution",
+      "id": "0.8445746298820975"
+    },
+    {
+      "body": "It is Awesome",
+      "author": "Parth Gajjar",
+      "id": "0.6624168352898343"
+    },
+    {
+      "body": "Mr. Perfect",
+      "author": "Akshay Gajjar",
+      "id": "0.6234333936583119"
+    }
+  ]
+}

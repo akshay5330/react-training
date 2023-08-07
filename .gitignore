@@ -23,3 +23,7 @@ post-deployment-app/node_modules/
 react-all-hooks/node_modules/
 react-with-typescript/node_modules/
 replacing-redux-with-hooks/node_modules/
+react-crash-course/node_modules/
+react-crash-course/dummy-backend/node_modules/
+react-complete-crud-yii/node_modules/
+react-complete-crud-json-server/
