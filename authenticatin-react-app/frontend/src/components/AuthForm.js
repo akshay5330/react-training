@@ -1,14 +1,8 @@
-import {
-  Form,
-  Link,
-  useSearchParams,
-  useActionData,
-  useNavigation,
-} from 'react-router-dom';
+import { Form, Link, useSearchParams, useActionData, useNavigation} from 'react-router-dom';
 
 import classes from './AuthForm.module.css';
 
-function AuthForm() {
+function AuthForm() { 
   const data = useActionData();
   const navigation = useNavigation();
 
