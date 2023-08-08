@@ -20,7 +20,6 @@ const ingredientReducer = (currentIngredients, action) => {
 
 const Ingredients = () => {
   const [userIngredients, dispatch] = useReducer(ingredientReducer, []);
-  // const [userIngredients, setUserIngredients] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
 
@@ -29,8 +28,6 @@ const Ingredients = () => {
   }, [userIngredients]);
 
   const filteredIngredientsHandler = useCallback(filteredIngredients => {
-
-    // setUserIngredients(filteredIngredients);
     dispatch({ type: 'SET', ingredients: filteredIngredients });
   }, []);
 
@@ -46,10 +43,6 @@ const Ingredients = () => {
         return response.json();
       })
       .then(responseData => {
-        // setUserIngredients(prevIngredients => [
-        //   ...prevIngredients,
-        //   { id: responseData.name, ...ingredient }
-        // ]);
         dispatch({
           type: 'ADD',
           ingredient: { id: responseData.name, ...ingredient }
@@ -64,9 +57,6 @@ const Ingredients = () => {
     })
       .then(response => {
         setIsLoading(false);
-        // setUserIngredients(prevIngredients =>
-        //   prevIngredients.filter(ingredient => ingredient.id !== ingredientId)
-        // );
         dispatch({ type: 'DELETE', id: ingredientId });
       })
       .catch(error => {
@@ -81,10 +71,8 @@ const Ingredients = () => {
 
   return (
     <div className="App">
-
       {error && <ErrorModal onClose={clearError}>{error}</ErrorModal>}
       <IngredientForm onAddIngredient={addIngredientHandler} loading={isLoading} />
-
       <section>
         <Search onLoadIngredients={filteredIngredientsHandler} />
         <IngredientList ingredients={userIngredients} onRemoveItem={removeIngredientHandler} />
